@@ -226,4 +226,67 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Contact Form Handling with PHP
+   */
+  const contactForm = document.querySelector('.php-email-form');
+  
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const loadingDiv = document.querySelector('.loading');
+      const errorDiv = document.querySelector('.error-message');
+      const sentDiv = document.querySelector('.sent-message');
+      
+      // Reset messages
+      if (errorDiv) {
+        errorDiv.style.display = 'none';
+        errorDiv.textContent = '';
+      }
+      if (sentDiv) sentDiv.style.display = 'none';
+      // Show loading message
+      if (loadingDiv) loadingDiv.style.display = 'block';
+      
+      const formData = new FormData(this);
+      
+      fetch(this.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Hide loading message
+        if (loadingDiv) loadingDiv.style.display = 'none';
+        
+        if (data.status === 'success') {
+          // Show success message
+          if (sentDiv) {
+            sentDiv.style.display = 'block';
+            // Reset form
+            contactForm.reset();
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+              sentDiv.style.display = 'none';
+            }, 5000);
+          }
+        } else {
+          // If PHP returns an error
+          if (errorDiv) {
+            errorDiv.textContent = data.message || 'An error occurred. Please try again.';
+            errorDiv.style.display = 'block';
+          }
+        }
+      })
+      .catch(error => {
+        if (loadingDiv) loadingDiv.style.display = 'none';
+        if (errorDiv) {
+          errorDiv.textContent = 'There was a problem sending your message. Please try again.';
+          errorDiv.style.display = 'block';
+        }
+        console.error('Error:', error);
+      });
+    });
+  }
+
 })();

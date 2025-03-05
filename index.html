@@ -48,11 +48,13 @@
 
     <nav id="navmenu" class="navmenu">
       <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+        <li><a href="#home" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+        <li><a href="#skills"><i class="bi bi-gear navicon"></i><span>Skills</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
         <li><a href="#projects-publications"><i class="bi bi-hdd-stack navicon"></i><span>Projects & Publications</span></a></li>
         <li><a href="#certificates"><i class="bi bi-images navicon"></i><span>Certificates</span></a></li>
+        <li><a href="#organizations"><i class="bi bi-building navicon"></i><span>Organizations</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
     </nav>
@@ -61,8 +63,8 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section light-background">
+    <!-- Home Section -->
+    <section id="home" class="home section light-background">
 
       <img src="assets/img/TinaShahedi.jpg" alt="" loading="lazy">
 
@@ -93,7 +95,7 @@
         </div>
       </div>
 
-    </section><!-- /Hero Section -->
+    </section><!-- /Home Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -413,7 +415,7 @@
           <li>Created Python materials for Utrecht University's Machine Learning with Python Summer School 2024. | <a href="https://utrechtsummerschool.nl/courses/data-science/data-science-machine-learning-with-python">[Summer School Course]</a></li>
           <li>Built an R Shiny App to visualize 3,600+ AI course datasets for academic planning.| <a href="https://tshahedi.shinyapps.io/ads-ai-taskforce/">[Shiny App]</a> | <a href="https://github.com/TShahedi/ADS-AI-FSBS">[GitHub]</a></li>
           <li>Developed a business plan for designing asset management and financial consulting software on a web application platform.</li>
-          <li>Designed a free-host academic website for the Applied Data Analysis and Visualization course. | <a href="https://tshahedi.github.io/adav-course/">[Website]</a> | <a href="https://github.com/TShahedi/adav-course">[GitHub]</a></li>
+          <!-- <li>Designed a free-host academic website for the Applied Data Analysis and Visualization course. | <a href="https://tshahedi.github.io/adav-course/">[Website]</a> | <a href="https://github.com/TShahedi/adav-course">[GitHub]</a></li> -->
           <li>Designing a Resilience Model for Small and Medium-sized Enterprises (SMEs) Using a Systems Dynamic Approach.</li>
           <li>Designing a green closed-loop supply chain network for the tire industry: considering cannibalization effects in
             hybrid production systems. | <a href="https://github.com/TShahedi/GCLSC-CE">[GitHub]</a></li>
@@ -681,40 +683,21 @@
                 <p>tina.shahedi@outlook.com</p>
               </div>
             </div><!-- End Info Item -->
-
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
+            <div class="map-container" data-aos="fade-up" data-aos-delay="200">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.7087231026962!2d5.167913376926977!3d52.08503206834187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6689bbb509ff7%3A0xb16915384f58d122!2sPadualaan%2014%2C%203584%20CH%20Utrecht!5e0!3m2!1sen!2snl!4v1704315764359!5m2!1sen!2snl"
+                width="100%"
+                height="450"
+                style="border:0; border-radius: 8px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div><!-- End Map Container -->
 
         </div>
 
@@ -746,7 +729,7 @@
   </div>
   <div class="container">
     <div class="copyright">
-      <span>Copyright</span> <strong class="px-1 sitename">Alex Smith</strong> <span>All Rights Reserved</span>
+      <span>Copyright</span> <strong class="px-1 sitename">Tina Shahedi</strong> <span>All Rights Reserved</span>
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
