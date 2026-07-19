@@ -24,13 +24,14 @@ Personal website and portfolio of **Tina Shahedi** — Junior Researcher in Meth
 ```text
 .
 ├── index.html          # single-page site
-├── assets/
-│   ├── css/            # main stylesheet
-│   ├── js/             # site scripts
-│   ├── img/            # photos, certificates, favicons
-│   ├── docs/           # CV and documents
-│   └── vendor/         # Bootstrap, AOS, GLightbox, Swiper
-└── forms/              # contact form handler
+├── robots.txt          # crawler rules
+├── sitemap.xml         # search engine sitemap
+└── assets/
+    ├── css/            # main stylesheet
+    ├── js/             # site scripts
+    ├── img/            # photos, certificates, favicons
+    ├── docs/           # CV and documents
+    └── vendor/         # Bootstrap, AOS, GLightbox, Swiper
 ```
 
 ## Run locally
